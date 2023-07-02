@@ -26,4 +26,7 @@ router.register(r'books', BookViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('books/<int:book_id>/', delete_book, name="delete_book"),
+    path('books/', create_book, name="create_book"),
+
 ]
