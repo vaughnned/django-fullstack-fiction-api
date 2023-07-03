@@ -28,5 +28,8 @@ urlpatterns = [
     path('', include(router.urls)),
     path('books/<int:book_id>/', delete_book, name="delete_book"),
     path('books/', create_book, name="create_book"),
+    path('books/<int:book_id>/', update_book, name="update_book"),
+
+
 
 ]
